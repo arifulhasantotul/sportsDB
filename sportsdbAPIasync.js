@@ -92,7 +92,6 @@ const showDataDetails = club => {
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title">${club.strTeam}</h5>
-                    <h6>Short Name: ${club.strTeamShort}</h6>
                     <p class="card-text">${club.strAlternate}</p>
                     <h6>League : ${club.strLeague}</h6>
                     <h6>Country : ${club.strCountry}</h6>
