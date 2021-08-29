@@ -2,14 +2,21 @@
 const searchErrorMsg = document.getElementById('search_error');
 searchErrorMsg.style.display = 'none';
 
+// search loader handle 
+const searchLoader = document.getElementById('preloader');
+
 // search button handle 
 const searchSportsData = async () => {
 
+    // search loader on 
+    searchLoader.style.display = 'block';
     // get input field value 
     const inputFieldId = document.getElementById('input_field');
     // get value 
     const inputValue = inputFieldId.value;
     // clear input field 
+    const row = document.getElementById('col_wrapper');
+    row.textContent = '';
     
 
     if (inputFieldId.value != '') {
@@ -23,8 +30,11 @@ const searchSportsData = async () => {
         
     } else {
         searchErrorMsg.style.display = 'block';
+        // search loader off 
+        searchLoader.style.display = 'none';
     }
     inputFieldId.value = '';
+    
 
 }
 
@@ -39,8 +49,13 @@ const showSportsData = teams => {
 
     if (teams == null) {
         resultErrorMsg.style.display = 'block';
+        // search loader off 
+        searchLoader.style.display = 'none';
+
     } else {
         resultErrorMsg.style.display = 'none';
+        // search loader off 
+        searchLoader.style.display = 'none';
 
         // forEach function for looping
         teams.forEach(team => {

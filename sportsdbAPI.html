@@ -8,7 +8,7 @@
     <!-- bootstrap cdn  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <title>The SposrtDB API</title>
+    <title>The SportsDB API</title>
 </head>
 <body>
 
@@ -25,6 +25,13 @@
                 <button onclick="searchSportsData()" class="btn btn-outline-secondary" type="button" id="button-addon2"> <i class="fab fa-2x fa-searchengin"></i> </button>
             </div>
             <!-- form field end -->
+
+            <!-- spinner start  -->
+            <div id="preloader" style="display: none;" class="text-center">
+                <div  class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
 
             <!-- search error  -->
             <div id="search_error">
